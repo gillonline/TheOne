@@ -1,0 +1,12 @@
+Temp
+Library
+obj
+/client/Foundation.sln
+/client/Assembly-CSharp.csproj
+/client/Assembly-CSharp-Editor.csproj
+/client/client.sln
+/client/Foundation.csproj
+Gen
+.vscode
+.vs
+Examples
