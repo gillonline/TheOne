@@ -17,6 +17,7 @@ public class CustomLoader : MonoBehaviour {
     {
         luaenv = new LuaEnv();
         luaenv.AddLoader((ref string filename) => {
+            Debug.Log("cc"+filename);
              if (filename == "InMemory")
              {
                  string script = "return {ccc = 9999}";
