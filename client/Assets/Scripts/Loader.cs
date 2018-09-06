@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using XLua;
 
-public class Loader : MonoBehaviour
+class Loader : MonoBehaviour
 {
-    // Use this for initialization
     void Start()
     {
-        Debug.Log(Application.dataPath);
-        LuaLoader.StartLua();
+        FileService.Instance.Init();
+        MediaService.Instance.Init();
+        NetworkService.Instance.Init();
+
+        GameSceneManager.Instance.Init();
+
+        GameSceneManager.Instance.SwitchScene("Start");
+        //Debug.Log(Application.dataPath);
+        //LuaLoader.StartLua();
     }
 }

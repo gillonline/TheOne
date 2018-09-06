@@ -9,7 +9,7 @@ class LuaLoader
         var luaEnv = new LuaEnv();
         luaEnv.AddLoader((ref string filePath) =>
         {
-            var fileFullPath = string.Format("{0}/{1}.lua", FileService.Instance.GetExternalRootDirectory(), filePath);
+            var fileFullPath = string.Format("{0}/lua_root/{1}.lua", FileService.Instance.GetExternalRootDirectory(), filePath);
             return File.ReadAllBytes(fileFullPath);
         });
         luaEnv.DoString("require 'main'");

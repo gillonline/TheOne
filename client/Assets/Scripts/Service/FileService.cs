@@ -8,7 +8,7 @@ class FileService : SingletonService<FileService>
 	public string GetExternalRootDirectory()
     {
         #if UNITY_EDITOR
-            return Application.dataPath + "/../../build/game_resource/lua_root";
+            return Application.dataPath + "/../../build/game_resource";
         #elif UNITY_ANDROID
         #endif
     }

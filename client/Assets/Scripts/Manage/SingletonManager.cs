@@ -1,16 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿class SingletonManager<T> where T : new()
+{
+    static T _instance;
 
-public class SingletonManager : MonoBehaviour {
+    public static T Instance
+    {
+        get
+        {
+            if (_instance != null)
+                return _instance;
+            else
+            {
+                _instance = new T();
+                return _instance;
+            }
+        }
+    }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public virtual void Init()
+    {
+
+    }
+
+    public virtual void Uninit()
+    {
+
+    }
 }

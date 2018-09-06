@@ -15,4 +15,9 @@ class SingletonService<T> where T : new()
             }
         }
     }
+
+    public virtual void Init()
+    {
+
+    }
 }
