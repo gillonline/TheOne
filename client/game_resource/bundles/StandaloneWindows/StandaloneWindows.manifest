@@ -1,0 +1,34 @@
+ManifestFileVersion: 0
+CRC: 2222143534
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: ui/ui_gamecontrol
+      Dependencies:
+        Dependency_0: ui/atlas/common_icon
+    Info_1:
+      Name: ui/ui_loading
+      Dependencies:
+        Dependency_0: ui/atlas/common
+    Info_2:
+      Name: ui/ui_messagebox
+      Dependencies:
+        Dependency_0: ui/atlas/common
+        Dependency_1: font
+    Info_3:
+      Name: ui/ui_start
+      Dependencies:
+        Dependency_0: ui/atlas/common
+        Dependency_1: font
+    Info_4:
+      Name: ui/atlas/common_icon
+      Dependencies: {}
+    Info_5:
+      Name: ui/atlas/resource_icon
+      Dependencies: {}
+    Info_6:
+      Name: ui/atlas/common
+      Dependencies: {}
+    Info_7:
+      Name: font
+      Dependencies: {}

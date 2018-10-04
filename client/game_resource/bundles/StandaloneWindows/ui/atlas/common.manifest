@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 3618148036
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ac315c033adddb8cb36a1c27e35bb3e8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Simple UI/PNG/UI_Tab_Inactive.png
+- Assets/Simple UI/PNG/UI_Frame_Dark_White.png
+- Assets/Simple UI/PNG/UI_Frame_Transparent.png
+- Assets/Simple UI/PNG/UI_Button_Standard_Orange.png
+- Assets/Simple UI/PNG/UI_Frame_Dark_Transparent.png
+- Assets/Simple UI/PNG/UI_Fill_Orange.png
+- Assets/Simple UI/PNG/UI_Fill_Green.png
+- Assets/Simple UI/PNG/UI_Tab_Active.png
+- Assets/Simple UI/PNG/UI_Frame_White.png
+- Assets/Simple UI/PNG/UI_Fill_Sky.png
+- Assets/Simple UI/PNG/UI_Button_Standard_Red.png
+- Assets/Simple UI/PNG/UI_Fill_Red.png
+- Assets/Simple UI/PNG/UI_Panel_Window.png
+- Assets/Simple UI/PNG/UI_Panel_Content.png
+- Assets/Simple UI/PNG/UI_Button_Standard_Green.png
+- Assets/Simple UI/PNG/UI_Button_Standard_Sky.png
+Dependencies: []

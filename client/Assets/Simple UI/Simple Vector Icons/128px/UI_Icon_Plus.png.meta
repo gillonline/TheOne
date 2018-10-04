@@ -124,9 +124,9 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-  spritePackingTag: s1
+  spritePackingTag: common_icon
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: ui/atlas/common_icon
   assetBundleVariant: 

@@ -1,0 +1,9 @@
+<bookstore>
+	<book category="CHILDREN">
+		<title>Harry Potter</title>
+		<author>J K. Rowling</author>
+		<year>2008</year>
+		<price>99.99</price>
+		<pri at="99.99" fd="tt"/>
+	</book>
+</bookstore>

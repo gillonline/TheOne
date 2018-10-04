@@ -4,7 +4,7 @@ abstract class GameScene
 {
     public string name;
 
-    public virtual void OnEnter()
+    public virtual void OnEnter(params object[] args)
     {
 
     }

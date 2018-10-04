@@ -12,9 +12,11 @@ class Loader : MonoBehaviour
         NetworkService.Instance.Init();
 
         GameSceneManager.Instance.Init();
+        StageManager.Instance.Init();
+        StageEditorManager.Instance.Init();
 
-        GameSceneManager.Instance.SwitchScene("Start");
+        GameSceneManager.Instance.SwitchScene("Hall");
         //Debug.Log(Application.dataPath);
-        //LuaLoader.StartLua();
+        //LuaLoader.StartLua(); 
     }
 }

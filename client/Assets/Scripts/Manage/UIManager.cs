@@ -6,13 +6,23 @@ class UIManager : SingletonManager<UIManager>
 {
     List<GameUI> uiList = new List<GameUI>();
 
+    public T OpenUI<T>(string resName, params object[] args) where T : GameUI, new()
+    {
+        var ui = uiList.Find(item => item.name.Equals(resName));
+        if (ui != null)
+            return ui.Open(args) as T;
+        else
+            return LoadUI<T>(resName, args);
+    }
+
     public T LoadUI<T>(string resName, params object[] args) where T : GameUI, new()
     {
         var res = ResourceManager.Instance.LoadPrefabAsync(resName);
         var ui = new T
         {
             state = UIState.Loading,
-            res = res
+            res = res,
+            name = resName 
         };
         if (res.loadCompleted)
         {
@@ -47,8 +57,14 @@ class UIManager : SingletonManager<UIManager>
         }
     }
 
-    public void UnloadUI(GameUI ui)
+    public T GetUI<T>(string resName) where T : GameUI, new()
     {
+        var ui = uiList.Find(item => item.name.Equals(resName));
+        return ui as T;
+    }
 
+    public void CloseAll()
+    {
+        uiList.ForEach(ui => ui.Close());
     }
 }

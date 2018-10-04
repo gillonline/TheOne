@@ -124,9 +124,9 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-  spritePackingTag: s1
+  spritePackingTag: resourse_icon
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: ui/atlas/resource_icon
   assetBundleVariant: 

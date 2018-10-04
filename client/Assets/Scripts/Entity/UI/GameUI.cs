@@ -7,18 +7,33 @@ abstract class GameUI
 {
     public ResourceInstance res;
     public UIState state;
+    public string name;
     protected GameObject instance;
     public Transform root;
+    public Canvas canvas;
 
     public void SetGameObject(GameObject instance)
     {
         this.instance = instance;
         root = instance.transform;
+        canvas = instance.GetComponent<Canvas>();
+    }
+
+    public Transform Find(string path)
+    {
+        return root.Find(path);
     }
 
     public T Find<T>(string path) where T : Component
     {
-        return root.Find(path).GetComponent<T>();
+        var tra = root.Find(path);
+        if (tra != null)
+            return tra.GetComponent<T>();
+        else
+        {
+            Debug.LogWarningFormat("{0} not found {1}", res.path, path);
+            return null;
+        }
     }
 
     public void AddImageClickListener(Image img, Action act)
@@ -33,18 +48,25 @@ abstract class GameUI
         OnLoaded();
     }
 
-    public void Open(params object[] args)
+    public GameUI Open(params object[] args)
     {
         state = UIState.Open;
-        instance.SetActive(true);
+        canvas.enabled = true;
         OnOpen(args);
+
+        return this;
     }
     
     public void Close()
     {
         state = UIState.Close;
-        instance.SetActive(false);
+        canvas.enabled = false;
         OnClose();
+    }
+
+    public void SetVisible(bool enable)
+    {
+        canvas.enabled = enable;
     }
 
     public void Release()
