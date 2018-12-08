@@ -21,6 +21,7 @@ public class Stage
     public Stage(StageConfig config)
     {
         this.config = config;
+        
         terrain = new Surface(config.terrain);
     }
 

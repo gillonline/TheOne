@@ -2775,22 +2775,22 @@ Prefab:
     - target: {fileID: 224601907160991348, guid: f0a5795b7c4a782429f42c5eac94909b,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224601907160991348, guid: f0a5795b7c4a782429f42c5eac94909b,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224601907160991348, guid: f0a5795b7c4a782429f42c5eac94909b,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 224601907160991348, guid: f0a5795b7c4a782429f42c5eac94909b,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 224928953072466470, guid: f0a5795b7c4a782429f42c5eac94909b,
         type: 2}
