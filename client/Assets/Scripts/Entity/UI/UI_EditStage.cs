@@ -5,8 +5,8 @@ using UnityEngine.EventSystems;
 class UI_EditStage : GameUI
 {
     Camera cam;
-    StageTerrain terrain;
-    TerrainBlock currentBlock;
+    Stage stage;
+    Block currentBlock;
 
     public override void OnLoaded()
     {
@@ -20,7 +20,7 @@ class UI_EditStage : GameUI
     public override void OnOpen(params object[] args)
     {
         cam = Camera.main;
-        terrain = args[0] as StageTerrain;
+        stage = args[0] as Stage;
     }
 
     void OnDrag(Vector2 offset, float deltaTime)
@@ -37,7 +37,7 @@ class UI_EditStage : GameUI
     void OnClick(PointerEventData eventData)
     {
         var wp = cam.ScreenToWorldPoint(eventData.position);
-        var selBlock = terrain.Find(wp.x, wp.z);
+        var selBlock = stage.terrain.Find(wp.x, wp.z);
         if (currentBlock != null)
             currentBlock.SetSelectState(false);
         if (selBlock != null)

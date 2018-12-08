@@ -1,0 +1,41 @@
+<stage>
+    <terrain />
+    <director />
+    <npc>
+        <role template='20023' pos='(0,0,0)' rotY='0' camp='c1'/>
+    </npc>
+    <triggers>
+        <trigger name='start' pos='(0,0,0)' rotY='0' id='10001'>
+            <wait msg='start' call='none'/>
+            <behavior name='born' type='summon'>
+                <role template='20023' pos='(0,0,0)' rotY='0'>
+                    <override lv='12' name='longking'/>
+                </role>
+            </behavior>
+        </trigger>
+        <trigger name='trigger0' pos='(0,0,0)' rotY='0' id='10002'>
+            <wait msg='end' call='none'/>
+            <behavior name='callm' type='summon'>
+                <role template='20023' pos='(0,0,0)' rotY='0'>
+                    <override lv='12' name='longking'/>
+                </role>
+            </behavior>
+        </trigger>
+        <trigger name='trigger1' pos='(0,0,0)' rotY='0' id='10003'>
+            <delay time='3' call='none'/>
+            <behavior name='callm' type='summon'>
+                <role template='20023' pos='(0,0,0)' rotY='0'>
+                    <override lv='12' name='longking'/>
+                </role>
+            </behavior>
+        </trigger>
+        <trigger name='trigger2' pos='(0,0,0)' rotY='0' id='10004'>
+            <collide radius='10' call='none'/>
+            <behavior type='summon'>
+                <role template='20023' pos='(0,0,0)' rotY='0'>
+                    <override lv='12' name='longking'/>
+                </role>
+            </behavior>
+        </trigger>
+    </triggers>
+</stage>

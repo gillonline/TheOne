@@ -1,9 +1,6 @@
-<bookstore>
-	<book category="CHILDREN">
-		<title>Harry Potter</title>
-		<author>J K. Rowling</author>
-		<year>2008</year>
-		<price>99.99</price>
-		<pri at="99.99" fd="tt"/>
-	</book>
-</bookstore>
+<block_type path="Stage/TerrainBlock">
+	<block name="grass" id="1"/>
+	<block name="rock" id="2"/>
+	<block name="snow" id="3"/>
+	<block name="water" id="4"/>
+</block_type>

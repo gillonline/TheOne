@@ -1,7 +1,7 @@
 ﻿class GameSceneCreateStage : GameScene
 {
     UI_EditStage edit_main;
-    StageTerrain terrain;
+    Stage stage;
     
     public GameSceneCreateStage() : base()
     {
@@ -13,10 +13,10 @@
         var stageconfig = args[0] as StageConfig;
         if (stageconfig != null)
         {
-            terrain = StageTerrain.Create(stageconfig.width, stageconfig.height);
-            terrain.Load();
+            stage = new Stage(stageconfig);
+            stage.Load();
 
-            edit_main = UIManager.Instance.OpenUI<UI_EditStage>("UI/UI_EditStage", terrain);
+            edit_main = UIManager.Instance.OpenUI<UI_EditStage>("UI/UI_EditStage", stage);
         }
     }
 }

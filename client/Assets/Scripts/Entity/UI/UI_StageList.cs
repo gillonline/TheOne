@@ -37,7 +37,7 @@ class UI_StageList : GameUI
 
     public override void OnOpen(params object[] args)
     {
-        var stageList = StageManager.Instance.stageList;
+        var stageList = StageConfigManager.Instance.stageList;
         foreach (var stage in stageList)
         {
             var item = new StageItem(tmp, stage);

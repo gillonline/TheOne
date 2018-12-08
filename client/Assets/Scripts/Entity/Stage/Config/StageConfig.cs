@@ -6,13 +6,14 @@ public class StageConfig : IBinaryBufferSerializable
     public int height;
     public string desc;
 
-    public StageTerrain terrain;
+    public SurfaceConfig terrain;
 
     public StageConfig(string name, int width, int height)
     {
         this.name = name;
         this.width = width;
         this.height = height;
+        this.terrain = new SurfaceConfig(width, height);
     }
 
     public StageConfig(BinaryBuffer buffer)

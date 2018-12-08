@@ -15,6 +15,12 @@ class FileService : SingletonService<FileService>
 #endif
     }
 
+    public string BuildResourcePath(string path)
+    {
+        var rootPath = GetExternalRootDirectory();
+        return Path.Combine(rootPath, path);
+    }
+
     public string[] GetAllFiles(string path)
     {
         var rootPath = GetExternalRootDirectory();
@@ -27,10 +33,18 @@ class FileService : SingletonService<FileService>
             return null;
     }
 
-    public byte[] ReadFile(string filePath)
+    public byte[] ReadFileBytes(string filePath)
     {
         if (File.Exists(filePath))
             return File.ReadAllBytes(filePath);
+        else
+            return null;
+    }
+
+    public string ReadFileText(string filePath)
+    {
+        if (File.Exists(filePath))
+            return File.ReadAllText(filePath);
         else
             return null;
     }

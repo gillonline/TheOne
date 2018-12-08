@@ -1,0 +1,8 @@
+<role id='20023' name='海怪1' lv='12' res='h0012'>
+    <animation>
+        <clip name='attack' />
+        <clip name='run' />
+        <clip name='idle' />
+    </animation>
+    <default hp='100' scale='1' />
+</role>

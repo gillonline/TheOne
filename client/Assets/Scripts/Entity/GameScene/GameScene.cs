@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-abstract class GameScene
+﻿abstract class GameScene
 {
     public string name;
 
@@ -10,4 +8,24 @@ abstract class GameScene
     }
 
     public virtual void OnLeave() { }
+
+    public void Update()
+    {
+        OnUpdate();
+    }
+
+    public virtual void OnUpdate()
+    {
+
+    }
+
+    public void RenderUpdate()
+    {
+        OnRenderUpdate();
+    }
+
+    public virtual void OnRenderUpdate()
+    {
+
+    }
 }
