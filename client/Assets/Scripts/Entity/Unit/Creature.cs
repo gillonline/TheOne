@@ -16,5 +16,7 @@ public class Creature : ActorObject
                 item.Update(stage);
             }
         }
+
+
     }
 }

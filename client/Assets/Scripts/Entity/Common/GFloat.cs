@@ -40,4 +40,9 @@ public struct GFloat
     {
         return new GFloat() { value = v };
     }
+
+    public static implicit operator GFloat(int v)
+    {
+        return new GFloat() { value = v };
+    }
 }

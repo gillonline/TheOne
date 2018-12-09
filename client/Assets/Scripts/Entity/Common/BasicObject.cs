@@ -8,7 +8,7 @@ public class BasicObject
     public int uuid;
     public bool active = false; //是否激活;
 
-    public void Update(Stage stage)
+    public virtual void Update(Stage stage)
     {
         OnUpdate(stage);
     }
