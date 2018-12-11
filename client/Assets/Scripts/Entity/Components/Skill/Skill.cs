@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Xml;
 
 /// <summary>
 /// 技能是组件之一;
@@ -10,9 +11,9 @@ public class Skill : BasicComponent
 
     public List<SkillSequence> sequenceList;
 
-    public Skill()
+    public Skill(XmlElement node)
     {
-
+        //至此用xml结构初始化技能;
     }
 
     public override void Update(Stage stage)

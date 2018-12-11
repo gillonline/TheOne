@@ -1,4 +1,6 @@
-﻿class GameSceneCreateStage : GameScene
+﻿using System.Xml;
+
+public class GameSceneCreateStage : GameScene
 {
     UI_EditStage edit_main;
     Stage stage;
@@ -10,7 +12,7 @@
 
     public override void OnEnter(params object[] args)
     {
-        var stageconfig = args[0] as StageConfig;
+        var stageconfig = args[0] as XmlNode;
         if (stageconfig != null)
         {
             stage = new Stage(stageconfig);

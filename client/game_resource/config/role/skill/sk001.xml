@@ -1,3 +1,3 @@
-<skill name='暴风雪' id='1000'>
-    <>
+<skill name='暴风雪' id='1000' cooldown='3' icon='xxxsss'>
+    <seq />
 </skill>

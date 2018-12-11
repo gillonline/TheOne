@@ -1,4 +1,4 @@
-﻿abstract class GameScene
+﻿public abstract class GameScene
 {
     public string name;
 

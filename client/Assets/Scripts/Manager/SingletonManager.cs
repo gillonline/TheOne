@@ -1,4 +1,4 @@
-﻿class SingletonManager<T> where T : new()
+﻿public class SingletonManager<T> where T : new()
 {
     static T _instance;
 

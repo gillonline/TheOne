@@ -4,7 +4,6 @@ using UnityEngine;
 
 class UI_BlockEdit : GameUI
 {
-
     class Item
     {
         public TerrainBlockEditorManager.BlockResConfig config;
@@ -45,7 +44,7 @@ class UI_BlockEdit : GameUI
         block = args[0] as Block;
         foreach (var item in blockTypeList)
         {
-            if (block.config.resID == item.config.id)
+            if (block.resID == item.config.id)
             {
                 item.SetOn(true);
                 break;

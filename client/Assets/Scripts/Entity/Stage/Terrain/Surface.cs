@@ -1,18 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 using UnityEngine;
 
 namespace Entity.Stage
 {
     public class Surface
     {
-        public SurfaceConfig config;
         public string name;
         public int width;
         public int height;
 
         public Transform root;
-        Block[] blockArray;
+        List<Block> blockList = new List<Block>();
 
         //     public static StageTerrain Create(int width, int height)
         //     {
@@ -35,16 +35,17 @@ namespace Entity.Stage
         //         return st;
         //     }
 
-        public Surface(SurfaceConfig config)
+        public Surface(XmlNode node)
         {
-            this.config = config;
-            blockArray = new Block[config.blocks.Length];
-            for (int i = 0; i < config.blocks.Length; i++)
+            var ele = (XmlElement)node;
+            width = ele.GetInt("width");
+            height = ele.GetInt("height");
+
+            var blockNodes = node.SelectNodes("block");
+            foreach (XmlNode item in blockNodes)
             {
-                blockArray[i] = new Block(config.blocks[i]);
+                blockList.Add(new Block(item));
             }
-            width = config.width;
-            height = config.height;
         }
 
         #region 资源
@@ -66,7 +67,7 @@ namespace Entity.Stage
             {
                 for (int j = 0; j < width; j++)
                 {
-                    var block = blockArray[i * width + j];
+                    var block = blockList[i * width + j];
                     var res = ResourceManager.Instance.LoadPrefabAsync(block.ResPath);
                     if (!resList.Contains(res))
                         resList.Add(res);
@@ -93,7 +94,7 @@ namespace Entity.Stage
             if (xoffset >= width) xoffset = width - 1;
 
             var index = xoffset + yoffset * width;
-            return blockArray[index];
+            return blockList[index];
         }
     }
 }

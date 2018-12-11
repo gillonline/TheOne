@@ -1,5 +1,11 @@
 <stage>
-    <terrain />
+    <terrain>
+        <block />
+        <block />
+        <block />
+        <block />
+        <block />
+    </terrain>
     <director />
     <npc>
         <role template='20023' pos='(0,0,0)' rotY='0' camp='c1'/>

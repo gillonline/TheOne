@@ -1,22 +1,28 @@
 ﻿using UnityEngine;
+using System.Xml;
 
 public class Block
 {
-    public BlockConfig config;
+    public int resID;
+    public bool walkable;
+    public bool flyable;
     public GameObject gameobj;
 
     public string ResPath
     {
         get
         {
-            var cfg = TerrainBlockEditorManager.Instance.FindBlockConfig(config.resID);
+            var cfg = TerrainBlockEditorManager.Instance.FindBlockConfig(resID);
             return cfg.res;
         }
     }
 
-    public Block(BlockConfig config)
+    public Block(XmlNode node)
     {
-        this.config = config;
+        var elem = (XmlElement)node;
+        resID = elem.GetInt("resID");
+        walkable = elem.GetBool("walkable");
+        flyable = elem.GetBool("flyable");
     }
 
     public void SetGameObject(GameObject obj)

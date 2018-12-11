@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Xml;
 
 public class Creature : ActorObject
 {
@@ -6,6 +7,11 @@ public class Creature : ActorObject
 
     //生物的特性是由组件来确定的;
     public List<BasicComponent> componentList;
+
+    public Creature(XmlNode node)
+    {
+        
+    }
 
     public override void OnUpdate(Stage stage)
     {
@@ -16,7 +22,5 @@ public class Creature : ActorObject
                 item.Update(stage);
             }
         }
-
-
     }
 }

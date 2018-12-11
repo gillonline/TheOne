@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Xml;
 using Entity.Stage;
 
 public class Stage
 {
-    public StageConfig config;
     public Surface terrain;
 
     public Director director; //导演类, 控制关卡呈现;
@@ -18,11 +18,9 @@ public class Stage
     public int frameIndex; //从0开始;
     public List<Creature> creatureList;
 
-    public Stage(StageConfig config)
+    public Stage(XmlNode node)
     {
-        this.config = config;
-        
-        terrain = new Surface(config.terrain);
+        terrain = new Surface(node.SelectSingleNode("terrain"));
     }
 
     public void Load()

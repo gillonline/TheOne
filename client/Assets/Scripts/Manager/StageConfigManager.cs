@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.Xml;
 
-class StageConfigManager : SingletonManager<StageConfigManager>
+public class StageConfigManager : SingletonManager<StageConfigManager>
 {
     public List<StageConfig> stageList = new List<StageConfig>();
 
     public override void Init()
     {
-        var allStageFiles = FileService.Instance.GetAllFiles("config\\stage");
+        var allStageFiles = FileService.Instance.GetAllFiles("config/stage");
         if (allStageFiles != null)
         {
             foreach (var filePath in allStageFiles)

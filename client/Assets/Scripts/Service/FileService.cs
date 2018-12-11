@@ -9,7 +9,7 @@ class FileService : SingletonService<FileService>
     public string GetExternalRootDirectory()
     {
 #if UNITY_EDITOR
-        return Application.dataPath + "\\..\\game_resource";
+        return Application.dataPath + "/../game_resource";
 #else
         return Application.persistentDataPath + "/game_resource";
 #endif
