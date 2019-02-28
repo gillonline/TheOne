@@ -1,5 +1,5 @@
 ﻿
-public class Director : BasicObject
+public class Director// : BasicObject
 {
 
 }

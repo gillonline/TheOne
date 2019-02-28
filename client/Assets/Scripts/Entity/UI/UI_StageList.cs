@@ -12,7 +12,7 @@ class UI_StageList : GameUI
         public StageItem(Transform clone, StageConfig config)
         {
             this.config = config;
-            this.clone = GameObject.Instantiate(clone.gameObject).transform;
+            this.clone = Object.Instantiate(clone.gameObject).transform;
             this.clone.transform.SetParent(clone.parent);
             this.clone.transform.localScale = Vector3.one;
         }

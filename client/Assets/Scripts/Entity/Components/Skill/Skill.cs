@@ -11,7 +11,7 @@ public class Skill : BasicComponent
 
     public List<SkillSequence> sequenceList;
 
-    public Skill(XmlElement node)
+    public Skill(XmlElement node) : base(node)
     {
         //至此用xml结构初始化技能;
     }

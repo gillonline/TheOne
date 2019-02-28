@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using XLua;
+﻿using UnityEngine;
 
 class Loader : MonoBehaviour
 {
@@ -27,6 +24,6 @@ class Loader : MonoBehaviour
 
     private void Update()
     {
-        
+
     }
 }

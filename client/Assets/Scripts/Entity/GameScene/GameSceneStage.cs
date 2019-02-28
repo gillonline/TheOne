@@ -12,14 +12,15 @@ class GameSceneStage : GameScene
 
     public override void OnEnter(params object[] args)
     {
-        var config = args[0] as XmlNode;
-        if (config != null)
+        if (args[0] is XmlNode config)
         {
             currentStage = new Stage(config);
         }
 
-        frameController = new FrameController();
-        frameController.stage = currentStage;
+        frameController = new FrameController
+        {
+            stage = currentStage
+        };
     }
 
     public override void OnUpdate()

@@ -8,7 +8,7 @@ public class Creature : ActorObject
     //生物的特性是由组件来确定的;
     public List<BasicComponent> componentList;
 
-    public Creature(XmlNode node)
+    public Creature(XmlNode node) : base(node)
     {
         
     }

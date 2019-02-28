@@ -4,10 +4,9 @@ public struct GFloat
 {
     public float value;
     
-    public static GFloat New(string val)
+    public static GFloat Parse(string val)
     {
-        var f = 0f;
-        if (float.TryParse(val, out f))
+        if (float.TryParse(val, out float f))
             return new GFloat() { value = f };
         else
         {
@@ -44,5 +43,15 @@ public struct GFloat
     public static implicit operator GFloat(int v)
     {
         return new GFloat() { value = v };
+    }
+
+    public static bool operator >=(GFloat l, GFloat r)
+    {
+        return l.value >= r.value;
+    }
+
+    public static bool operator <=(GFloat l, GFloat r)
+    {
+        return l.value <= r.value;
     }
 }
